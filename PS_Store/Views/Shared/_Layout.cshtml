@@ -6,10 +6,11 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/fontawesome")
 
 
 </head>
-<body style="background-image: url('backup.jpg'); background-position: center; background-repeat: repeat-y">
+<body style="background-image: url('.jpg'); background-position: center; background-repeat: repeat-y">
     
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
@@ -21,14 +22,25 @@
                 </button>
                 @Html.ActionLink("Ps Store", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-            <div class="navbar-collapse collapse"> nn
+            <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="@Url.Action("Index", "Home")"><i class="fa fa-home fa-lg"></i> Home</a></li>
                     <li><a href="@Url.Action("About", "Home")"><i class="fa fa-info fa-lg"></i> About</a></li>
                     <li><a href="@Url.Action("Contact", "Home")"><i class="fa fa-phone fa-lg"></i> Contact</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="@Url.Action("Index", "Menus")"><i class="fa fa-circle-o fa-lg"></i> Menu</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Menu<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="@Url.Action("Index", "Soups")"><i class="fa fa-home fa-lg"></i>Soup</a></li>
+                            <li><a href="@Url.Action("Index", "Appetizers")"><i class="fa fa-home fa-lg"></i>Appetizer</a></li>
+                            <li><a href="@Url.Action("Index", "Entrees")"><i class="fa fa-home fa-lg"></i>Entree</a></li>
+                            <li><a href="@Url.Action("Index", "DimSums")"><i class="fa fa-home fa-lg"></i>DimSums</a></li>
+                            <li><a href="@Url.Action("Index", "Specials")"><i class="fa fa-home fa-lg"></i>Special</a></li>
+                        </ul>
+                    </li>                    
                     @Html.Partial("_LoginPartial")
                 </ul>
             </div>

@@ -21,6 +21,7 @@ namespace PS_Store.Models
         public string ShortDescription { get; set; }
 
         [StringLength(512)]
+        [ScaffoldColumn(false)]
         public string LongDescription { get; set; }
 
         [StringLength(128)]

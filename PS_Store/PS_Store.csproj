@@ -196,6 +196,10 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Asset\Images\Beansoup.jpg" />
+    <Content Include="Asset\Images\Hotandsour.jpg" />
+    <Content Include="Asset\Images\Lotusroot.jpg" />
+    <Content Include="Asset\Images\Meatandtofu.jpg" />
     <Content Include="back.jpg" />
     <Content Include="Address.PNG" />
     <Content Include="backup.jpg" />
